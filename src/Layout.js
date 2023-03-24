@@ -72,6 +72,15 @@ function Layout() {
     [ user ]
 );
 
+useEffect(() => {
+  const userFromStorage = localStorage.getItem('user');
+  if (userFromStorage && !profile) {
+    const userObj = JSON.parse(userFromStorage);
+    setUser(userObj);
+    setProfile(true);
+  }
+}, [setUser, profile]);
+
 
 
 
@@ -105,7 +114,10 @@ function Layout() {
 
   const logOut = () => {
     googleLogout();
+    localStorage.removeItem("user");
     setProfile(null);
+    setUser(null);
+    setEmail(null);
 };
 
   const saveNote = async (note, index) => {
