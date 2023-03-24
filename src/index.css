@@ -21,10 +21,10 @@ body {
 }
 ::-webkit-scrollbar {
   width: 8px;
-  background: #eee;
+  background: white;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(215, 215, 215);
+  background-color: whitesmoke;
 }
 button,
 input {
