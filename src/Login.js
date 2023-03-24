@@ -12,8 +12,14 @@ const Login = ({user, setUser, profile, setProfile, email, setEmail}) => {
     const [ profile, setProfile ] = useState([]);*/
 
     const login = useGoogleLogin({
-        onSuccess: (codeResponse) => setUser(codeResponse),
-        onError: (error) => console.log('Login Failed:', error)
+        onSuccess: (codeResponse) => {
+            setUser(codeResponse)
+            localStorage.setItem("user", JSON.stringify(codeResponse))
+        
+        
+        },
+        onError: (error) => console.log('Login Failed:', error),
+        
     });
 
     
