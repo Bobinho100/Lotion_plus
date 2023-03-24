@@ -35,6 +35,23 @@ function Layout() {
     }
   }, []);
 
+  useEffect (()=>{
+    const asyncEffect = async() => {
+      if (email){
+        let promise = null;
+        promise = await fetch(`https://vf7yt7dtbvny4xzibsvx57rkza0ssjvp.lambda-url.ca-central-1.on.aws/?e-mail=${email}`, {
+          method: "GET",
+        });
+        if (promise.status === 200){
+          const note = await promise.json();
+          setNotes(note);
+        }
+      }
+    };
+    asyncEffect();
+    
+  },[email])
+
   useEffect(
     () => {
         if (user) {
@@ -85,6 +102,11 @@ function Layout() {
     onSuccess: (codeResponse) => setUser(codeResponse),
     onError: (error) => console.log("Login Failed", error)
   })
+
+  const logOut = () => {
+    googleLogout();
+    setProfile(null);
+};
 
   const saveNote = async (note, index) => {
     note.body = note.body.replaceAll("<p><br></p>", "");
@@ -174,6 +196,7 @@ function Layout() {
           <h6 id="app-moto">Like Notion, but worse.</h6>
         </div>
         <aside>&nbsp;</aside>
+        <button onClick={()=> logOut() }>Logout, {email} </button>
       </header>
       {!profile ? (<Login 
        email = {email}
