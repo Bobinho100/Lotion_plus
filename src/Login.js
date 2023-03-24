@@ -12,8 +12,14 @@ const Login = ({user, setUser, profile, setProfile, email, setEmail}) => {
     const [ profile, setProfile ] = useState([]);*/
 
     const login = useGoogleLogin({
-        onSuccess: (codeResponse) => setUser(codeResponse),
-        onError: (error) => console.log('Login Failed:', error)
+        onSuccess: (codeResponse) => {
+            setUser(codeResponse)
+            localStorage.setItem("user", JSON.stringify(codeResponse))
+        
+        
+        },
+        onError: (error) => console.log('Login Failed:', error),
+        
     });
 
     
@@ -35,7 +41,7 @@ const Login = ({user, setUser, profile, setProfile, email, setEmail}) => {
         <div>
             <h2>React Google Login</h2>
            
-                <button onClick={() => login()}>Sign in with Google 🚀 </button>
+                <button  className='loginbutton' onClick={() => login()}>Sign in with Google 🚀 </button>
             
         </div>
     
