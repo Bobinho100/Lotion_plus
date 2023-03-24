@@ -43,7 +43,7 @@ button {
   overflow: hidden;
 }
 #container > header {
-  border-top: 3px solid #4d455d;
+  border-top: 4px solid #4d455d;
 }
 header h1 a:hover {
   color: #9b91b1;
