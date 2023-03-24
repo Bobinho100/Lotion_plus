@@ -80,18 +80,6 @@ useEffect(() => {
     setProfile(true);
   }
 }, [setUser, profile]);
-
-
-
-
-
-
-
-
-
-
-
-
   useEffect(() => {
     localStorage.setItem(localStorageKey, JSON.stringify(notes));
   }, [notes]);
