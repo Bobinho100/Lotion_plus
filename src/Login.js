@@ -43,7 +43,7 @@ const Login = ({user, setUser, profile, setProfile, email, setEmail}) => {
   return (
     <>
         <div>
-            <h2>React Google Login</h2>
+        
            
                 <button  className='loginbutton' onClick={() => login()}>Sign in with Google 🚀 </button>
             
