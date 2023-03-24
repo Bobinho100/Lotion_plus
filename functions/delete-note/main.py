@@ -20,6 +20,7 @@ def handler(event, context):
     note_id = body["id"]
     email = body["e-mail"]
 
+
     try:
         delete_item(email, note_id)
         return{

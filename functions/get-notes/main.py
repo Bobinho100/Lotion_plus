@@ -17,12 +17,12 @@ def handler(event, context):
             "statusCode":200,
             "body": json.dumps(res["Items"])
         }
-    except Exception as e:
-        print(f"exception: {e}")
+    except Exception as exp:
+        print(f"exception: {exp}")
         return {
             "statusCode":500,
             "body": json.dumps({
-            "message": str(e)
+            "message": str(exp)
             })
             
         }
