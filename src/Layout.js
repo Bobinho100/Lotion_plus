@@ -208,7 +208,12 @@ useEffect(() => {
           <h6 id="app-moto">Like Notion, but worse.</h6>
         </div>
         <aside>&nbsp;</aside>
-        <button onClick={()=> logOut() }>Logout, {email} </button>
+        {!profile ? (null):
+        (<button onClick={()=> logOut() }>Logout, {email} </button>)
+
+        
+        }
+        
       </header>
       {!profile ? (<Login 
        email = {email}
