@@ -2,5 +2,5 @@
 
 Put your names and UCIDs here:
 
-- Member #1: Name -- UCID
-- Member #2: Name -- UCID
+- Member #1: Bernard Aire -- 30112955
+- Member #2: Rhishik Roy  -- 30163348
