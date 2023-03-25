@@ -9,6 +9,10 @@ table = dynamodb_resource.Table("lotion-30112955")
 
 
 def handler(event, context):
+
+
+    
+    
     email = event["queryStringParameters"]["e-mail"]
     try:
         res = table.query(KeyConditionExpression = Key("e-mail").eq(email))

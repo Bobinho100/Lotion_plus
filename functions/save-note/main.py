@@ -16,6 +16,9 @@ table = dynamob_resource.Table("lotion-30112955")
 
 
 def handler(event, context):
+
+    
+
     body = json.loads(event['body'])
     try:
         table.put_item(Item = body)

@@ -8,6 +8,14 @@ table = dynamob_resource.Table("lotion-30112955")
 
 
 def delete_item(email, note_id):
+
+    
+
+
+
+
+
+
     return table.delete_item(
         Key = {
         "e-mail":email,
