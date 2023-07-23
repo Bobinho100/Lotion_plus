@@ -64,11 +64,38 @@ You may use the front-end you built in the previous assignment here if it works 
 - Use of Terraform to build the resources on AWS
 - Naming patterns discussed above: your resources must have your UCID(s) in their name
 
-## :moneybag: AWS Cost
+## Links and preview
 
-- This assignment won't cost you anything if you follow the best practices discussed in the class
-- Use the `PROVISIONED` billing mode, and only 1 RCU and WCU for your DynamoDB table as shown in the [lecture notes](https://masoudkarimif.github.io/posts/aws-dynamodb-crud-with-lambda-terraform/#create-a-dynamodb-table-with-terraform)
-- Don't use a memory configuration bigger than 128MB for your Lambdas. Use the [lecture notes](https://masoudkarimif.github.io/posts/aws-lambda-with-terraform/#create-a-lambda-function) to create Lambda functions. When you don't specify the `memory_size` field, it will default to 128MB which is the minimum amount
-- Don't send a huge number of requests to your Lambdas using automated scripts. You have 1 Million free requests, and up to 3.2 million seconds of free compute time under the [Free Tier](https://aws.amazon.com/free/)
-- Remember to enable Free Tier notifications on your account before building anything as shown in the videos on D2L
-- If you go over the Free Tier (you would have to screw it up really bad, honestly), you can create a new Free AWS account and build your infrastructure there instead. Thankfully, Terraform makes that process super easy for you
+# The link to the project is:
+https://stirring-cocada-6f9544.netlify.app
+## Preview of the project
+Homepage
+<img width="1511" alt="Screenshot 2023-07-22 at 9 27 28 PM" src="https://github.com/Bobinho100/Lotion_plus/assets/114113147/d2fa03fe-b4d3-4ba1-a995-ed93a0988ecd">
+After Signing In
+<img width="1512" alt="Screenshot 2023-07-22 at 9 30 16 PM" src="https://github.com/Bobinho100/Lotion_plus/assets/114113147/12e5a621-782b-4829-8b2f-2f71d4ecae5d">
+Editing Mode, writing a note
+<img width="1512" alt="Screenshot 2023-07-22 at 9 32 22 PM" src="https://github.com/Bobinho100/Lotion_plus/assets/114113147/9510c9c2-6bcf-4ef9-988d-2dd21fe61e90">
+Saving a note
+<img width="1512" alt="Screenshot 2023-07-22 at 9 33 25 PM" src="https://github.com/Bobinho100/Lotion_plus/assets/114113147/2059e615-fc3b-477b-a510-a2e2067ad460">
+Deleting a Note
+<img width="1512" alt="Screenshot 2023-07-22 at 9 42 04 PM" src="https://github.com/Bobinho100/Lotion_plus/assets/114113147/eee993dc-c8f1-4cee-a5de-c58598eebdb8">
+  Note deleted
+
+  <img width="1512" alt="Screenshot 2023-07-22 at 9 43 46 PM" src="https://github.com/Bobinho100/Lotion_plus/assets/114113147/da2f8162-33b2-4f30-88f3-e3fb6ef02a68">
+
+  Support mobile view
+  <img width="448" alt="Screenshot 2023-07-22 at 9 45 22 PM" src="https://github.com/Bobinho100/Lotion_plus/assets/114113147/88086c9f-035b-4454-9e59-5b4d4782034b">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
