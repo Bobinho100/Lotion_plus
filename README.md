@@ -43,15 +43,13 @@ You may use the front-end you built in the previous assignment here if it works 
 - You need to use the `email` and `access_token` you get in the headers of the requests to make sure the user is authenticated properly. If not, the functions should return the HTTP status code `401` for unauthenticated requests
 - In order to get the full mark, you need to **DEMO your work in PERSON**. You could either demo it to a TA or the instructor. Demo is 50% of the assignment
 
-## :couple: Group Assignment
+## Things I used
+- I created all resources with AWS on terraform. Put all my configuration in the [`main.tf`](infra/main.tf) file
+- used AWS DynamoDB for the database
+- Created 3 Lambda functions using python
+- 
 
-In case you're doing the assignment as part of a group, pay attention to the following so you won't lose any points:
 
-- Use the UCID of one team member to name the Lambdas, and the other one to name the DynamoDB table
-- Put the names and UCIDs of the team members in the [Team-Members](./Team-Members.md) file
-- Both members must commit to the group repo. If a student has no commit after the deadline, their grade will be Zero. Things like "I sent the code over TikTok or Discord" are not acceptable. **No commmit = No grade**
-- Try to split the work as evenly as possible between team members
-- Both members must be present for the Demo. If you're not present, your grade will be Zero for the Demo
 
 ## :heavy_check_mark: Things you may change
 
