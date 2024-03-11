@@ -80,6 +80,7 @@ button:hover,
 #main-container {
   display: flex;
   flex: 1;
+  overflow: auto;
 }
 #write-box {
   flex: 1;
@@ -244,4 +245,14 @@ input.note-title {
   transform: translate(-50%, -50%);
   border: 1px solid pink;
   border-radius: 5px;
+}
+.feedback{
+  background-color: whitesmoke;
+  font-size: small;
+  padding: 4px;
+  margin: 25px;
+
+}
+.feedback a {
+  text-align: center;
 }

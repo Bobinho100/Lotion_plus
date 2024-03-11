@@ -49,7 +49,7 @@ function Layout() {
       }
     };
     asyncEffect();
-    
+
   },[email])
 
   useEffect(
@@ -124,16 +124,16 @@ useEffect(() => {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({ ...note, "e-mail":profile.email}),
-      
+
     });
-    
+
     try {
       const jsonRes = await res.json();
       console.log(jsonRes);
     } catch (error) {
       console.error(error);
     }
-    
+
 
 
 
@@ -144,7 +144,7 @@ useEffect(() => {
 
   const deleteNote = async (index) => {
     const id = notes[index].id;
-    
+
     setEditMode(false);
 
     const res = await fetch("https://2554vovcisooct7masmag2zvdu0eyssd.lambda-url.ca-central-1.on.aws/",{
@@ -191,27 +191,38 @@ useEffect(() => {
         </aside>
         <div id="app-header">
           <h1>
-            <Link to="/notes">Lotion</Link>
+            <Link to="/notes">NoteFeed</Link>
           </h1>
-          <h6 id="app-moto">Like Notion, but worse.</h6>
+          <h6 id="app-moto">Modified Noteapp, best.</h6>
         </div>
         <aside>&nbsp;</aside>
-        {!profile ? (null):
-        (<button onClick={()=> logOut() }>Logout, {email} </button>)
 
-        
+        {!profile ? (null):
+
+        (<div className="feedback">
+
+          <a href="https://note-feedback-ui.onrender.com
+
+            " >Give feedback</a>
+
+
+            </div>)}
+        {!profile ? (null):
+        (<button onClick={()=> logOut() }>Logout </button>)
+
+
         }
-        
+
       </header>
-      {!profile ? (<Login 
+      {!profile ? (<Login
        email = {email}
        setEmail= {setEmail}
        profile = {profile}
        setProfile = {setProfile}
        user = {user}
        setUser = {setUser}
-       
-       
+
+
        /> ):(
         <>
         <div id="main-container" ref={mainContainerRef}>
@@ -232,13 +243,13 @@ useEffect(() => {
           <Outlet context={[notes, saveNote, deleteNote]} />
         </div>
       </div>
-    
+
       </>
 
 
       )}
       </div>
-      
+
   );
 }
 
